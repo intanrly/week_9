@@ -218,7 +218,7 @@
 
         $csvfile = 'C:\Intan\TSD UNAIR\Semester 3\Alpro 2\week 9\datapribadi.csv';
 
-        if (file_exist($csvfile)) {
+        if (file_exists($csvfile)) {
             $csv = array_map('str_getcsv', file($csvfile));
 
             foreach ($csv as $row) {

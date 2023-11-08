@@ -169,19 +169,19 @@
             <label for="Id">Id:</label>
             <input type="text" name="Id" id="Id" required>
             <br>
-            <label for="F_Name">First Nama:</label>
+            <label for="F_Name">First Name:</label>
             <input type="text" name="F_Name" id="F_Name" required>
             <br>
-            <label for="L_Name">Last Nama:</label>
+            <label for="L_Name">Last Name:</label>
             <input type="text" name="L_Name" id="L_Name" required>
             <br>
-            <label for="Email">Nama:</label>
+            <label for="Email">Email:</label>
             <input type="email" name="Email" id="Email" required>
             <br>
-            <label for="Email2">First Nama:</label>
+            <label for="Email2">Email2:</label>
             <input type="email" name="Email2" id="Email2" required>
             <br>
-            <label for="Profesi">First Nama:</label>
+            <label for="Profesi">Profesi:</label>
             <input type="text" name="Profesi" id="Profesi" required>
             <br>
             <button type="button" id="simpan-button">Submit</button>

@@ -85,23 +85,23 @@
     </style>
 </head>
 <body>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <label for="Id">Id:</label>
             <input type="text" name="Id" id="Id" required>
             <br>
-            <label for="F_Name">First Nama:</label>
+            <label for="F_Name">First Name:</label>
             <input type="text" name="F_Name" id="F_Name" required>
             <br>
-            <label for="L_Name">Last Nama:</label>
+            <label for="L_Name">Last Name:</label>
             <input type="text" name="L_Name" id="L_Name" required>
             <br>
-            <label for="Email">Nama:</label>
+            <label for="Email">Email:</label>
             <input type="email" name="Email" id="Email" required>
             <br>
-            <label for="Email2">First Nama:</label>
+            <label for="Email2">Email2:</label>
             <input type="email" name="Email2" id="Email2" required>
             <br>
-            <label for="Profesi">First Nama:</label>
+            <label for="Profesi">Profesi:</label>
             <input type="text" name="Profesi" id="Profesi" required>
             <br>
             <button type="button" id="simpan-button">Submit</button>
@@ -123,6 +123,7 @@
                 file_put_contents('C:\Intan\TSD UNAIR\Semester 3\Alpro 2\week 9\datapribadi.csv', $data, FILE_APPEND);
                 echo 'Data telah ditambahkan!';
             }
+        }
         ?>
 
         <?php
@@ -137,7 +138,15 @@
 
         $csvfile = 'C:\Intan\TSD UNAIR\Semester 3\Alpro 2\week 9\datapribadi.csv';
 
-        if (file_exist($csvfile)) {
+        if (is_writable($csvfile)) {
+            // Izin penulisan ada, lanjutkan menulis ke file
+            // ...
+        } else {
+            // Izin penulisan tidak ada, tampilkan pesan kesalahan
+            echo 'Tidak bisa menulis ke file.';
+        }
+
+        if (file_exists($csvfile)) {
             $csv = array_map('str_getcsv', file($csvfile));
 
             foreach ($csv as $row) {

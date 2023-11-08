@@ -203,6 +203,7 @@
                 file_put_contents('C:\Intan\TSD UNAIR\Semester 3\Alpro 2\week 9\datapribadi.csv', $data, FILE_APPEND);
                 echo 'Data telah ditambahkan!';
             }
+        }
         ?>
 
         <?php
